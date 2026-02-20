@@ -1,4 +1,4 @@
-# SentinelX - Real-time Fraud Intelligence Platform
+# SentinelX 
 
 This is the architectural blueprint and reference implementation for **SentinelX**.
 
