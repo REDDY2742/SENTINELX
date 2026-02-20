@@ -103,7 +103,7 @@ export default function VendorDetail() {
         // Since the current backend might not have a single vendor endpoint yet, 
         // we'll fetch all and find the one matching the name/id for now, 
         // to stay consistent with existing data flow.
-        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/administration/vendors', {
+        const response = await fetch('https://13.201.79.48:8000/api/v1/auth/employee/administration/vendors', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await response.json();

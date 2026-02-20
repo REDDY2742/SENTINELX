@@ -21,7 +21,7 @@ export default function Register() {
   useEffect(() => {
     const fetchBranches = async () => {
       try {
-        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/public/branches');
+        const response = await fetch('https://13.201.79.48:8000/api/v1/auth/public/branches');
         const data = await response.json();
         if (data.branches) {
           setBranches(data.branches);
@@ -118,7 +118,7 @@ export default function Register() {
       setError('');
 
       try {
-        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/register', {
+        const response = await fetch('https://13.201.79.48:8000/api/v1/auth/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ export default function Register() {
     setError('');
 
     try {
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/send-verification-otp', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/send-verification-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formik.values.email })
@@ -217,7 +217,7 @@ export default function Register() {
     setError('');
 
     try {
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/verify-email-otp', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/verify-email-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formik.values.email, otp })

@@ -16,7 +16,7 @@ export default function VendorManagement() {
   const fetchVendors = async () => {
     try {
       const token = localStorage.getItem('access_token');
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/administration/vendors', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/employee/administration/vendors', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -38,7 +38,7 @@ export default function VendorManagement() {
     try {
       const token = localStorage.getItem('access_token');
       const vendorId = name.replace(/\s+/g, '_');
-      const response = await fetch(`http://13.201.79.48:8000/api/v1/auth/employee/administration/vendors/${vendorId}`, {
+      const response = await fetch(`https://13.201.79.48:8000/api/v1/auth/employee/administration/vendors/${vendorId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });

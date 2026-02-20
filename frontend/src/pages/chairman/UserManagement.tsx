@@ -11,7 +11,7 @@ export default function UserManagement() {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('access_token');
-        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/users', {
+        const response = await fetch('https://13.201.79.48:8000/api/v1/auth/users', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await response.json();

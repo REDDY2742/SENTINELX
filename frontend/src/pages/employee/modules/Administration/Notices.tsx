@@ -30,7 +30,7 @@ export default function InternalNotices() {
     try {
       setLoading(true);
       const token = localStorage.getItem('access_token');
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/administration/notices', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/employee/administration/notices', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -49,7 +49,7 @@ export default function InternalNotices() {
     setPosting(true);
     try {
       const token = localStorage.getItem('access_token');
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/administration/notices', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/employee/administration/notices', {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${token}`,
@@ -81,7 +81,7 @@ export default function InternalNotices() {
   const togglePin = async (notice: any) => {
     try {
       const token = localStorage.getItem('access_token');
-      await fetch('http://13.201.79.48:8000/api/v1/auth/employee/administration/notices', {
+      await fetch('https://13.201.79.48:8000/api/v1/auth/employee/administration/notices', {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${token}`,
@@ -100,7 +100,7 @@ export default function InternalNotices() {
     
     try {
       const token = localStorage.getItem('access_token');
-      const response = await fetch(`http://13.201.79.48:8000/api/v1/auth/employee/administration/notices/${noticeId}`, {
+      const response = await fetch(`https://13.201.79.48:8000/api/v1/auth/employee/administration/notices/${noticeId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });

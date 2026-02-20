@@ -34,7 +34,7 @@ export default function Transfers() {
     try {
       setTxLoading(true);
       const token = localStorage.getItem('access_token');
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/customer/transfer', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/customer/transfer', {
          method: 'POST',
          headers: {
             'Authorization': `Bearer ${token}`,

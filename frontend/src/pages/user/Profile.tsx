@@ -66,7 +66,7 @@ export default function Profile() {
       const fetchBranch = async () => {
         setLoadingBranch(true);
         try {
-          const response = await fetch('http://13.201.79.48:8000/api/v1/auth/public/branches');
+          const response = await fetch('https://13.201.79.48:8000/api/v1/auth/public/branches');
           const data = await response.json();
           const myBranch = data.branches?.find((b: any) => b.id === user.branchId);
           if (myBranch) setBranchDetails(myBranch);
@@ -93,7 +93,7 @@ export default function Profile() {
     setMessage({ type: '', text: '' });
     try {
       const token = localStorage.getItem('access_token');
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/me', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/me', {
         method: 'PATCH',
         headers: { 
           'Authorization': `Bearer ${token}`,

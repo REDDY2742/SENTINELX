@@ -81,8 +81,8 @@ export default function ApplyLoan() {
       const selectedType = loanTypes.find(t => t.id === formData.type);
 
       const url = isEdit 
-        ? `http://13.201.79.48:8000/api/v1/auth/customer/apply/${editData.id}`
-        : 'http://13.201.79.48:8000/api/v1/auth/customer/apply';
+        ? `https://13.201.79.48:8000/api/v1/auth/customer/apply/${editData.id}`
+        : 'https://13.201.79.48:8000/api/v1/auth/customer/apply';
 
       const response = await fetch(url, {
         method: isEdit ? 'PUT' : 'POST',

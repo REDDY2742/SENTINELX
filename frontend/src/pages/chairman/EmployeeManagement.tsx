@@ -84,7 +84,7 @@ export default function EmployeeManagement() {
     const selectedRole = BANK_ROLES.find(r => r.value === formData.role);
     
     try {
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/register', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -155,7 +155,7 @@ export default function EmployeeManagement() {
     }
 
     try {
-      const response = await fetch(`http://13.201.79.48:8000/api/v1/auth/users/${employeeId}`, {
+      const response = await fetch(`https://13.201.79.48:8000/api/v1/auth/users/${employeeId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('access_token')}`
@@ -204,7 +204,7 @@ export default function EmployeeManagement() {
     e.preventDefault();
     
     try {
-      const response = await fetch(`http://13.201.79.48:8000/api/v1/auth/users/${selectedEmployee.id}`, {
+      const response = await fetch(`https://13.201.79.48:8000/api/v1/auth/users/${selectedEmployee.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -234,7 +234,7 @@ export default function EmployeeManagement() {
   const fetchEmployees = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/users', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/users', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('access_token')}`

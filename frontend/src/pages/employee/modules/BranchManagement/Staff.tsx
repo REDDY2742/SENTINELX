@@ -30,7 +30,7 @@ export default function StaffDirectory() {
     try {
       setLoading(true);
       const token = localStorage.getItem('access_token');
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/branch-management/staff', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/employee/branch-management/staff', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -56,7 +56,7 @@ export default function StaffDirectory() {
         performance: 5.0
       };
       
-      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/branch-management/staff', {
+      const response = await fetch('https://13.201.79.48:8000/api/v1/auth/employee/branch-management/staff', {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${token}`,
