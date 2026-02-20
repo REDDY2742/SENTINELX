@@ -21,14 +21,14 @@ export default function EmployeeDashboard() {
         const token = localStorage.getItem('access_token');
         
         // Fetch User Info
-        const userRes = await fetch('http://localhost:8000/api/v1/auth/me', {
+        const userRes = await fetch('http://13.201.79.48:8000/api/v1/auth/me', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const userData = await userRes.json();
         setUser(userData);
 
         // Fetch Dashboard Stats
-        const statsRes = await fetch('http://localhost:8000/api/v1/auth/employee/dashboard', {
+        const statsRes = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/dashboard', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const statsData = await statsRes.json();

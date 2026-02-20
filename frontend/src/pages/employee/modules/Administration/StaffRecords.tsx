@@ -30,7 +30,7 @@ export default function StaffRecords() {
   const fetchStaff = async () => {
     try {
       const token = localStorage.getItem('access_token');
-      const response = await fetch('http://localhost:8000/api/v1/auth/employee/administration/staff', {
+      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/administration/staff', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -56,7 +56,7 @@ export default function StaffRecords() {
     setSaving(true);
     try {
       const token = localStorage.getItem('access_token');
-      const response = await fetch('http://localhost:8000/api/v1/auth/employee/administration/staff', {
+      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/administration/staff', {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${token}`,

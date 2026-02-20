@@ -36,7 +36,7 @@ export default function BranchDetails() {
     const fetchBranchDetails = async () => {
       try {
         const token = localStorage.getItem('access_token');
-        const response = await fetch('http://localhost:8000/api/v1/auth/admin/branches', {
+        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/admin/branches', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await response.json();
@@ -260,7 +260,7 @@ export default function BranchDetails() {
 
                      try {
                         const token = localStorage.getItem('access_token');
-                        const response = await fetch('http://localhost:8000/api/v1/auth/admin/branches', {
+                        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/admin/branches', {
                             method: 'POST',
                             headers: { 
                                 'Authorization': `Bearer ${token}`,
@@ -338,7 +338,7 @@ function AddEmployeeModal({ branchId, onClose, onAdd }: { branchId: string, onCl
             try {
                 const token = localStorage.getItem('access_token');
                 // Correct endpoint is /api/v1/auth/users
-                const response = await fetch('http://localhost:8000/api/v1/auth/users', {
+                const response = await fetch('http://13.201.79.48:8000/api/v1/auth/users', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 const data = await response.json();
@@ -366,7 +366,7 @@ function AddEmployeeModal({ branchId, onClose, onAdd }: { branchId: string, onCl
         try {
             const token = localStorage.getItem('access_token');
             // Update user to assign branchId
-            await fetch(`http://localhost:8000/api/v1/auth/users/${selectedUserId}`, {
+            await fetch(`http://13.201.79.48:8000/api/v1/auth/users/${selectedUserId}`, {
                 method: 'PUT',
                 headers: { 
                     'Authorization': `Bearer ${token}`,

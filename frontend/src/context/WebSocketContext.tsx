@@ -32,7 +32,7 @@ export const WebSocketProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         if (!token) return;
 
         // Use environment variable or default
-        const WS_URL = 'ws://localhost:8000/api/v1/ws';
+        const WS_URL = 'ws://13.201.79.48:8000/api/v1/ws';
         socket = new WebSocket(`${WS_URL}?token=${token}`);
         ws.current = socket;
 

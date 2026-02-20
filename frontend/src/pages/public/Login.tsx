@@ -41,7 +41,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/api/v1/auth/login', {
+      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ export default function Login() {
     setError('');
 
     try {
-        const response = await fetch('http://localhost:8000/api/v1/auth/otp/verify', {
+        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/otp/verify', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

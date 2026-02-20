@@ -11,7 +11,7 @@ export default function BranchCustomers() {
     const fetchCustomers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:8000/api/v1/auth/employee/branch-management/customers', {
+        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/employee/branch-management/customers', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await response.json();

@@ -33,7 +33,7 @@ export default function UserOverview() {
     try {
       setRequestingCard(true);
       const token = localStorage.getItem('access_token');
-      const response = await fetch('http://localhost:8000/api/v1/auth/customer/apply', {
+      const response = await fetch('http://13.201.79.48:8000/api/v1/auth/customer/apply', {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${token}`,
@@ -66,7 +66,7 @@ export default function UserOverview() {
     try {
         setTransferring(true);
         const token = localStorage.getItem('access_token');
-        const response = await fetch('http://localhost:8000/api/v1/auth/customer/transfer', {
+        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/customer/transfer', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,

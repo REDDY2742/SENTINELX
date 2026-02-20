@@ -10,7 +10,7 @@ export default function Overview() {
     const fetchStats = async () => {
       try {
         const token = localStorage.getItem('access_token');
-        const response = await fetch('http://localhost:8000/api/v1/auth/admin/overview', {
+        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/admin/overview', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await response.json();

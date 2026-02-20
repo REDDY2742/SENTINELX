@@ -66,7 +66,7 @@ export default function EmployeeLayout() {
       }
 
       try {
-        const response = await fetch('http://localhost:8000/api/v1/auth/me', {
+        const response = await fetch('http://13.201.79.48:8000/api/v1/auth/me', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
 
