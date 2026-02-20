@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Calculator, ArrowRight, CheckCircle, AlertTriangle, HelpCircle } from 'lucide-react';
+import { useState } from 'react';
+import { Calculator, CheckCircle, AlertTriangle } from 'lucide-react';
 
 export default function Calculators() {
   const [activeTab, setActiveTab] = useState<'emi' | 'eligibility'>('emi');

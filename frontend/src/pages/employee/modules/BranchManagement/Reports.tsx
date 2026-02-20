@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { 
-  ClipboardList, Download, FileText, Calendar, 
-  Search, Filter, Share2, 
-  Printer, MoreHorizontal, AlertCircle, Clock, Loader2, Plus, X, Check
+  ClipboardList, Download, FileText,
+  Search, Share2,
+  MoreHorizontal, AlertCircle, Loader2, Plus, X, Check
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 

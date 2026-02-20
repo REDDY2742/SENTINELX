@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { TrendingUp, PieChart, Activity } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 

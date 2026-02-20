@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   ShieldCheck, AlertTriangle, 
   FileLock2, Zap, 
@@ -23,10 +23,10 @@ const defaultAlerts = [
 
 export default function BranchCompliance() {
   const [stats, setStats] = useState<any[]>([]);
-  const [alerts, setAlerts] = useState<any[]>(defaultAlerts);
+  const [alerts, _setAlerts] = useState<any[]>(defaultAlerts);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
-  const [rating, setRating] = useState({ health: '99.8%', response: '12.4m' });
+  const [rating, _setRating] = useState({ health: '99.8%', response: '12.4m' });
 
   useEffect(() => {
     fetchCompliance();

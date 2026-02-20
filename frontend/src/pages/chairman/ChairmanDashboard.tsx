@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TrendingUp, Globe, Briefcase, DollarSign, Activity, PieChart, AlertTriangle } from 'lucide-react';
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
+import { XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 
 // Mock Data
 const REVENUE_DATA = [
@@ -113,7 +113,7 @@ function ExecCard({ title, value, sub, icon }: { title: string, value: string, s
     )
 }
 
-function Sidebar({ role }: { role: string }) {
+function Sidebar({ role: _role }: { role: string }) {
   return (
     <nav className="fixed left-0 top-0 h-full w-64 bg-slate-950 border-r border-slate-900 p-6 flex flex-col z-10">
       <div className="flex items-center gap-3 mb-10">
