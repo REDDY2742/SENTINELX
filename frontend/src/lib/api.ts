@@ -4,7 +4,7 @@
  * In development: set VITE_API_URL in .env
  * In production:  set VITE_API_URL in Amplify environment variables
  */
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://main.d56r7szn3zkg.amplifyapp.com';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://sentinelxbank.vercel.app';
 
 export const WS_BASE_URL = API_BASE_URL
   .replace(/^http:\/\//, 'ws://')
