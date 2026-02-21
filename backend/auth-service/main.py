@@ -8,7 +8,17 @@ app = FastAPI(title=settings.PROJECT_NAME)
 # CORS Security
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173", "https://sentinelx.bank"], # Add frontend URLs
+    allow_origins=[
+        # Local development
+        "http://localhost:3000",
+        "http://localhost:5173",
+        # Production — Amplify frontend
+        "https://main.d56r7szn3zkg.amplifyapp.com",
+        # Production — Vercel frontend (update with your actual Vercel URL)
+        "https://sentinelxbank.vercel.app",
+        # Custom domain (if applicable)
+        "https://sentinelx.bank",
+    ],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "PATCH"],
     allow_headers=["*"],
